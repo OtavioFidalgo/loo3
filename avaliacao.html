@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Alunos</title>
+</head>
+<body>
+    <h1>Avaliação de Alunos nas suas Diciplinas:</h1>
+
+    <p id="avaliacao"></p>
+
+    <script>
+        let matricula;
+        let prova1 = 0;
+        let prova2 = 0;
+        let prova3 = 0;
+        let media = 0;
+        let frequencia;
+        let resultado ="";
+
+        opcao = prompt("deseja registrar mais um aluno. \n 1 - sim \n 2 - não")
+
+        while (opcao == 1) {
+            matricula = prompt("Digite o número da matricula.")
+            prova1 = Number(prompt("Digite o valor da primeira prova do aluno."));
+            prova2 = Number(prompt("Digite o valor da segunda prova do aluno."));
+            prova3 = Number(prompt("Digite o valor da terceira prova do aluno."));
+
+            media = prova1 + prova2 + prova / 3
+
+            if(media >= 7){
+                resultado = "Aprovado"
+            }else{
+                resultado = "Reprovado"
+            }
+
+            if(frequencia > 25){
+                frequencia = "Aprovado"
+            }else{
+                frequencia = "Reprovado"
+            }
+
+            opcao = prompt("deseja registrar mais um aluno. \n 1 - sim \n 2 - não")
+
+        }
+
+        document.getElementById('avaliacao').innerHTML = matricula 
+    </script>
+    
+</body>
+</html>

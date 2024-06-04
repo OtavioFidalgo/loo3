@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recrutamnento de uma Empresa</title>
+</head>
+<body>
+    <h1>Vagas</h1>
+    <p id="candidatos"></p>
+    <p>Total Média: <span id="media"></span></p>
+    <p>Total Candidatos M: <span id="homens"></span></p>
+    <p>Total Candidatos F: <span id="mulheres"></span></p>
+    <p>Candidatos maiores de idade com experiência: <span id="maiores"></span></p>
+
+    <script>
+        let candidatos = 0;
+        let nome; 
+        let numero;
+        let idade = 0;
+        let sexo;
+        let experiencia;
+        let totalidade;
+        let media;
+        let homens;
+        let mulheres;
+        let maiores = "";
+        let fim;
+        let resultado = "";
+
+        let opcao = prompt("Deseja registrar mais um candidato? \n 1 - sim \n 2 - não")
+
+        while (opcao == "1") {
+            nome = prompt("Digite o nome do candidato.");
+            numero = prompt("Digite o número do candidato.");
+            idade = Number(prompt("Digite a idade do candidato"));
+            sexo = prompt("Digite o sexo do candidato.\n M - homens \n F - mulheres");
+            experiencia = prompt("Digite se o candidato possui experiencia.");
+
+            totalidade += idade
+            media = totalidade / candidatos
+
+            if(sexo =="M"){
+                homens++
+            }else{
+                mulheres++
+            }
+
+            if(idade >= 18 && experiencia == "sim"){
+                maiores = "</br>" + numero
+
+            }
+            resultado += "</br></br> Número do Candidato: " + numero
+            resultado += "</br></br> Idade do Candidato: " + idade
+            resultado += "</br></br> Sexo do Candidato: " + sexo
+            resultado += "</br></br> Número do Candidato: " + numero
+            resultado += "</br></br> Número do Candidato: " + numero
+
+        }
+    </script>
+    
+</body>
+</html>
